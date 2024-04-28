@@ -44,12 +44,12 @@ const ListProduct = () => {
   <hr />
   {allproducts.map((e) => {
     // Replace "http://localhost:4000" with "http://65.2.189.56:4000" in the image URL
-    const imageUrl = e.image.replace('http://localhost:4000', 'http://3.111.70.48:4000');
+    // const imageUrl = e.image.replace('http://localhost:4000', 'http://3.111.70.48:4000');
 
     return (
       <div key={e.id}>
         <div className="listproduct-format-main listproduct-format">
-          <img className="listproduct-product-icon" src={imageUrl} alt="" />
+          <img className="listproduct-product-icon" src={e.image} alt="" />
           <p cartitems-product-title>{e.name}</p>
           <p>${e.old_price}</p>
           <p>${e.new_price}</p>

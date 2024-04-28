@@ -34,7 +34,8 @@ const AddProduct = () => {
 
     if (dataObj.success) {
       product.image = dataObj.image_url;
-      console.log(product);
+      product.image=product.image.replace('http://localhost:4000', 'http://3.111.70.48:4000')
+      console.log(product,'productimg',product.image);
         await fetch('http://3.111.70.48:4000/addproduct', {
       method: 'POST',
       headers: {
