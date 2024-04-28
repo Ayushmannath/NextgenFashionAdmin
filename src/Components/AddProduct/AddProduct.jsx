@@ -22,7 +22,7 @@ const AddProduct = () => {
     formData.append('product', image);
     
     
-      await fetch('http://65.2.189.56:4000/upload', {
+      await fetch('http://3.111.70.48:4000/upload', {
       method: 'POST',
       headers: {
         Accept:'application/json',
@@ -35,7 +35,7 @@ const AddProduct = () => {
     if (dataObj.success) {
       product.image = dataObj.image_url;
       console.log(product);
-        await fetch('http://65.2.189.56:4000/addproduct', {
+        await fetch('http://3.111.70.48:4000/addproduct', {
       method: 'POST',
       headers: {
         Accept:'application/json',

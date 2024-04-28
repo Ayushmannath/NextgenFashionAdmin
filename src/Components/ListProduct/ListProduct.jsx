@@ -5,7 +5,7 @@ import cross_icon from '../Assets/cross_icon.png'
 const ListProduct = () => {
   const [allproducts, setAllProducts] = useState([]);
   const fetchInfo = () => { 
-    fetch('http://65.2.189.56:4000/allproducts') 
+    fetch('http://3.111.70.48:4000/allproducts') 
             .then((res) => res.json()) 
             .then((data) => setAllProducts(data))
     }
@@ -15,7 +15,7 @@ const ListProduct = () => {
     }, [])
 
     const removeProduct = async (id) => {
-      await fetch('http://65.2.189.56:4000/removeproduct', {
+      await fetch('http://3.111.70.48:4000/removeproduct', {
       method: 'POST',
       headers: {
         Accept:'application/json',
@@ -44,7 +44,7 @@ const ListProduct = () => {
   <hr />
   {allproducts.map((e) => {
     // Replace "http://localhost:4000" with "http://65.2.189.56:4000" in the image URL
-    const imageUrl = e.image.replace('http://localhost:4000', 'http://65.2.189.56:4000');
+    const imageUrl = e.image.replace('http://localhost:4000', 'http://3.111.70.48:4000');
 
     return (
       <div key={e.id}>
